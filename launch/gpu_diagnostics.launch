@@ -1,0 +1,14 @@
+<launch>
+      <arg name="diagnostic_frequency" default="0.5" />
+      <arg name="gpu_identifier" default="index" />
+
+      <node name="gpu_diagnostics" pkg="ros_nvml_diagnostics" type="ros_nvml_diagnostics_node" respawn="false">
+
+            <!--Allows to specify frequency a which gpu diagnostics should be gathered and emitted. Fastest value is 1 Hz-->
+            <param name="diagnostic_frequency" value="$(arg diagnostic_frequency)" />
+            <!--A GPU installed on a computer can be reffered to using various techniques. We expose this ability to the user
+            so he can decide how GPU is reffered to in diagnostics. Valid values are "index", "uuid" and "serial".-->
+            <param name="gpu_identifier" value="$(arg gpu_identifier)" />
+
+      </node>
+</launch>

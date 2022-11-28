@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ros_nvml_diagnostics</name>
+  <version>0.0.1</version>
+  <description>Gpu diagnostic package based on nvml</description>
+
+  <maintainer email="thomas.kostas@ascent.ai">Thomas Kostas</maintainer>
+
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>roscpp</depend>
+  <depend>diagnostic_updater</depend>
+
+</package>
